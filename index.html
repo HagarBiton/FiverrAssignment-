@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      charset="utf-8"
+      type="text/javascript"
+      src="//js-eu1.hsforms.net/forms/embed/v2.js"
+    ></script>
+    <title>Fiverr</title>
+  </head>
+  <body>
+    <div class="mainDiv">
+      <div class="titleHeader">
+        <h1 class="title">
+          Book your
+          <em class="free">free</em> consultation
+        </h1>
+        <p class="subTitle">
+          Ready to utilize AI and scale your business? Share your info with our
+          AI experts
+          <br />
+          and book a free call.
+        </p>
+      </div>
+      <div class="inputGroup">
+        <script>
+          hbspt.forms.create({
+            region: "eu1",
+            portalId: "27087407",
+            formId: "fcd98378-44ac-40da-ae49-f2d1773aa116",
+            onFormReady: function (form) {
+              // Find the dropdown field for "Project Budget"
+              const projectBudgetDropdown = form.querySelector(
+                'select[name="project_budget"]'
+              );
+
+              // Hide the dropdown field
+              projectBudgetDropdown.style.display = "none";
+
+              // Create a new input field
+              const projectBudgetInput = document.createElement("input");
+              projectBudgetInput.type = "text";
+              projectBudgetInput.name = "project_budget";
+              projectBudgetInput.placeholder =
+                "$2000-$5000, $5000-15,000, Over 15,000";
+              projectBudgetInput.className = "hs-input"; // Add the .hs-input class
+              projectBudgetInput.id = "project_budget_input"; // Add the id
+
+              // Insert the new input field after the hidden dropdown field
+              projectBudgetDropdown.parentNode.insertBefore(
+                projectBudgetInput,
+                projectBudgetDropdown.nextSibling
+              );
+
+              const asterix = document.querySelector('.hs-form-required')
+              asterix.remove()
+
+              // Add placeholders to all input fields
+              const emailInput = form.querySelector('input[type="email"]');
+              emailInput.placeholder = "Company email";
+
+              const nameInput = form.querySelector('input[name="company"]');
+              nameInput.placeholder = "Company name";
+
+              const industryInput = form.querySelector('input[name="industry"]');
+              industryInput.placeholder = "Industry";
+
+              // Change text on the submit button
+              const submitButton = form.querySelector('input[type="submit"]');
+              submitButton.value = "Primary CTA";
+            },
+          });
+        </script>
+      </div>
+      <h4 class="loremIpsum">
+        Lorem ipsum dolor sit amet,
+        <span class="consectetur">consectetur elit</span> adipiscing, sed do
+        eiusmod tempor.
+      </h4>
+    </div>
+  </body>
+</html>
